@@ -1,0 +1,26 @@
+[
+  {
+    "productName":"Sauce Labs Backpack",
+    "expectedCartQuantity": "1"
+  },
+  {
+    "productName":"Sauce Labs Bike Light",
+    "expectedCartQuantity": "2"
+  },
+  {
+    "productName":"Sauce Labs Bolt T-Shirt",
+    "expectedCartQuantity": "3"
+  },
+  {
+    "productName":"Sauce Labs Fleece Jacket",
+    "expectedCartQuantity": "4"
+  },
+  {
+    "productName":"Sauce Labs Onesie",
+    "expectedCartQuantity": "5"
+  },
+  {
+    "productName":"Test.allTheThings() T-Shirt (Red)",
+    "expectedCartQuantity": "6"
+  }
+  ]
