@@ -15,7 +15,7 @@ public class CheckoutYourInformationTests extends BaseTest{
 
     @Test(dataProvider = "checkoutYourInfoNegativeTestDataProvider", groups = {"Negative"})
     public void checkoutYourInformationNegativeTest(String firstName, String lastName, String PostalCode, String expectedErrorMessage) {
-        loginPage.login();
+        loginPage.login(TEST_USER_NAME, TEST_PASSWORD);
         productsPage.clickAddToCardButton(TEST_ITEM_NAME);
         productsPage.clickShoppingCartLink();
         cartPage.clickCheckoutButton();

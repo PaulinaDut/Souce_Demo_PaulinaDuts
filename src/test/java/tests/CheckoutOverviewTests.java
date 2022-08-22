@@ -11,11 +11,11 @@ public class CheckoutOverviewTests extends BaseTest {
 
     @Test(dataProvider = "checkoutOverviewDataProvider", groups = {"Regression"})
     public void checkoutOverviewTotalPriceTest(String productName, String TotalPrice) {
-        loginPage.login();
+        loginPage.login(TEST_USER_NAME, TEST_PASSWORD);
         productsPage.clickAddToCardButton(productName);
         productsPage.clickShoppingCartLink();
         cartPage.clickCheckoutButton();
-        checkoutYourInformationPage.setCheckoutYourInformationForm();
+        checkoutYourInformationPage.setCheckoutYourInformationForm("Terry", "Berry", "12345");
         checkoutYourInformationPage.clickContinueButton();
         String actualItemPrice = checkoutOverviewPage.getItemPrice();
         Assert.assertEquals(actualItemPrice, TotalPrice );

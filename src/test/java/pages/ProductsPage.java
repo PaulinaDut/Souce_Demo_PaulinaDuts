@@ -67,11 +67,10 @@ public class ProductsPage extends BasePage{
     }
     public void clickBurgerCrossButton() {
         driver.findElement(crossButton).click();
-
     }
 
     public void clickAllItems(){
-        driver.findElement(allItemsBurgerMenuItem);
+        driver.findElement(allItemsBurgerMenuItem).click();
     }
     public void clickLogout(){
         driver.findElement(LogoutBurgerMenuItem).click();

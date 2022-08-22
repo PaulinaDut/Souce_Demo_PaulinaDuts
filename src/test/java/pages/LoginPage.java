@@ -39,9 +39,9 @@ public class LoginPage extends BasePage {
         return driver.findElement(errorMessageContainer).getText();
     }
 
-    public void login() {
-        setUserNameInputValue("standard_user");
-        setPasswordInputValue("secret_sauce");
+    public void login(String userNameInput, String passwordInput) {
+        setUserNameInputValue(userNameInput);
+        setPasswordInputValue(passwordInput);
         clickLoginButton();
     }
 

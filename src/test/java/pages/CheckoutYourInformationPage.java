@@ -43,14 +43,12 @@ public class CheckoutYourInformationPage extends BasePage {
     public String getErrorMessage() {
         return driver.findElement(errorMessageContainer).getText();
     }
-    public void checkoutYourInformationForm(String firstName, String lastName, String postalCode) {
 
-    }
 
-    public void setCheckoutYourInformationForm() {
-        setFirstName("Terry");
-        setLastName("Berry");
-        setPostalCode("12345");
+    public void setCheckoutYourInformationForm(String firstName, String lastName, String postalCode) {
+        setFirstName(firstName);
+        setLastName(lastName);
+        setPostalCode(postalCode);
 
     }
 

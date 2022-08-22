@@ -11,7 +11,7 @@ import utils.TestDataParser;
 public class ItemDetailsTests extends BaseTest {
     @Test(dataProvider = "itemDetailsTestsDataProvider", groups={"Regression"})
     public void itemDetailsDescriptionTest(String productName, String expectedItemDetailsDescription, String expectedItemDetailsPrice) {
-        loginPage.login();
+        loginPage.login(TEST_USER_NAME, TEST_PASSWORD);
         productsPage.openProductDetails(productName);
         String actualItemDetailsPrice = detailsPage.getItemDetailsPrice();
         String actualItemDetailsDescription = detailsPage.getItemDetailsDescription();

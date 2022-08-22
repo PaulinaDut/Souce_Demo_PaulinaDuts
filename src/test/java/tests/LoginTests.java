@@ -11,7 +11,7 @@ public class LoginTests extends BaseTest {
 
     @Test(groups = {"Smoke","Regression"})
     public void positiveLoginTest() {
-        loginPage.login();
+        loginPage.login(TEST_USER_NAME, TEST_PASSWORD);
         Assert.assertTrue(productsPage.isHeaderContainerDisplayed());
 
     }

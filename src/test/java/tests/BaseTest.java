@@ -24,6 +24,9 @@ public class BaseTest {
     protected CheckoutCompletePage checkoutCompletePage;
     protected DetailsPage detailsPage;
     protected final String TEST_ITEM_NAME = "Sauce Labs Onesie";
+    protected final String TEST_USER_NAME = "standard_user";
+    protected final String TEST_PASSWORD = "secret_sauce";
+
 
     @Parameters({"browser"})
     @BeforeClass(alwaysRun = true)

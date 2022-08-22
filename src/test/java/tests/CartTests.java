@@ -22,7 +22,7 @@ public class CartTests extends BaseTest {
     public void cartPositiveTest(String productName,
                                                      String expectedItemDetailsDescription,
                                                      String expectedItemDetailsPrice) {
-        loginPage.login();
+        loginPage.login(TEST_USER_NAME, TEST_PASSWORD);
         productsPage.clickAddToCardButton(productName);
         productsPage.clickShoppingCartLink();
         String actualCartProductDescription = cartPage.getCartProductDescription();
@@ -36,7 +36,7 @@ public class CartTests extends BaseTest {
 
     @Test(dataProvider = "cartQuantityTestsDataProvider", groups = "Regression")
     public void cartQuantityTest(String productName, String expectedCartQuantity) {
-        loginPage.login();
+        loginPage.login(TEST_USER_NAME, TEST_PASSWORD);
         productsPage.clickAddToCardButton(productName);
         productsPage.clickShoppingCartLink();
         String actualCartQuantity = cartPage.getProductQuantity(productName);

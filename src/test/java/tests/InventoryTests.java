@@ -15,7 +15,7 @@ public class InventoryTests extends BaseTest {
 
     @Test(dataProvider ="inventoryDataProvider", groups = {"Smoke"})
     public void productItemDescriptionTest(String productName, String expectedDescription, String expectedPrice) {
-        loginPage.login();
+        loginPage.login(TEST_USER_NAME, TEST_PASSWORD);
         String actualPrice= productsPage.getProductPrice(productName);
         String actualDescription = productsPage.getProductDescription(productName);
         Assert.assertEquals(actualPrice, expectedPrice);
@@ -24,7 +24,7 @@ public class InventoryTests extends BaseTest {
 
     @Test(groups = {"Smoke"})
     public void logoutFromBurgerMenuTest() {
-        loginPage.login();
+        loginPage.login(TEST_USER_NAME, TEST_PASSWORD);
         productsPage.clickBurgerMenu();
         productsPage.clickLogout();
         Assert.assertTrue(loginPage.isLoginButtonDisplayed());
